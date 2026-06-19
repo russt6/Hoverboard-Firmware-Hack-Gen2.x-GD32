@@ -122,7 +122,7 @@ void AnswerMaster(void)
 	oData.iAmp = (int16_t) 	(currentDC * 100);
 	oData.iSpeed = (int16_t) (realSpeed * 100);
 	oData.iOdom = (int32_t) iOdom;
-	oData.iOdom = iAnswerMaster++;
+	//oData.iOdom = iAnswerMaster++;
 	#ifdef SEND_IMU_DATA
 		oData.iGyroX = mpuData.gyro.x;
 		oData.iGyroY = mpuData.gyro.y;
