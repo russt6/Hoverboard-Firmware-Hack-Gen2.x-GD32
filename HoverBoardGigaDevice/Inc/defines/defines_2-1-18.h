@@ -5,36 +5,36 @@
 	#define HAS_BUZZER
 #endif
 
+// need this lower than default in order to prevent overcurrent throttling
+#define MOTOR_AMP_CONV_DC_AMP 0.0201465201465
 
 // by AILIFE4798
-
+ 
 #define HALL_A		PA0
-#define HALL_B		PA1
-#define HALL_C		PB11
-#define PHASE_A		PB1
-#define PHASE_B		PB0
-#define PHASE_C		PA7
+#define HALL_B		PB11
+#define HALL_C		PA1
 
-#define LED_RED		PA15
+#define LED_RED			PA15
 #define LED_ORANGE		PB3
 #define LED_GREEN		PB4
 #define UPPER_LED		PB5
 #define LOWER_LED		PB8
-#define BUZZER		PB9
-#define VBATT		PA4
+#define BUZZER			PB9
+#define VBATT			PA4
 #define CURRENT_DC		PA6
 #define SELF_HOLD		PB2
-#define BUTTON		PA5
+#define BUTTON			PA5
 
 
 // Brushless Control DC (BLDC) defines
-#define BLDC_GH PA8		// green	, Tommyboi2001 all bldc pins same as 2.0
-#define BLDC_GL PB13		
-#define BLDC_BH PA9			// blue
-#define BLDC_BL PB14		
-#define BLDC_YH PA10			// yellow
-#define BLDC_YL PB15		
-#define TIMER_BLDC_PULLUP	GPIO_PUPD_NONE	// robo: not sure if some boards indeed nned GPIO_PUPD_PULLUP like 2.2 or 2.3
+#define BLDC_GH PA10            // green
+#define BLDC_GL PB15            
+#define BLDC_BH PA9             // blue
+#define BLDC_BL PB14            
+#define BLDC_YH PA8             // yellow
+#define BLDC_YL PB13            
+
+#define TIMER_BLDC_PULLUP	GPIO_PUPD_NONE	// robo: not sure if some boards indeed need GPIO_PUPD_PULLUP like 2.2 or 2.3
 
 
 // Timer BLDC short circuit emergency shutoff define
@@ -46,7 +46,7 @@
 #define USART0_RX	PB7
 
 // GD32F130 USART1 GD32F130 TX/RX: (PA14/PA15)AF1 , (PA2,PA3)AF1	, (PA8/PB0)AlternateFunction4
-#define USART1_TX		PA3
-#define USART1_RX		PA2
+#define USART1_TX       PA2
+#define USART1_RX       PA3
 
-#endif
+#endif 
